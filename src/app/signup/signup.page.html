@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" routerLink="/welcome" routerDirection="back">
+        <img src="../../assets/back.svg" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-padding container">
+    <h1>Inscription</h1>
+
+    <div class="form-container">
+      <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input type="text" [(ngModel)]="newUser.name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="newUser.email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input type="password"  [(ngModel)]="newUser.password"  name="password"></ion-input>
+        <ion-icon name="eye" slot="end"></ion-icon>
+      </ion-item>
+
+      <ion-button expand="block" class="main-button"  (click)="register()">Inscription</ion-button>
+
+      <div class="sign-up">
+        Avez-vous un compte? <ion-button color="dark" fill="clear" routerLink="/login" routerDirection="forward">Se connecter</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

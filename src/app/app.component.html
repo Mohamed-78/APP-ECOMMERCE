@@ -1,0 +1,44 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" [disabled]="!isMenuEnabled">
+      <ion-content>
+        <div class="main-list">
+          <ion-list id="inbox-list">
+
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" (click)="navigate('/home', 1)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 1">
+                <ion-label>Accueil</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" (click)="navigate('/profile', 2)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 2">
+                <ion-label>Profil</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" (click)="navigate('/my-cart', 3)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 3">
+                <ion-label>Panier</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" (click)="navigate('/favorite', 4)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 4">
+                <ion-label>Favoris</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" (click)="navigate('/my-orders', 5)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 5">
+                <ion-label>Commandes</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+
+          <!-- Close Button -->
+          <ion-button fill="clear" color="dark" (click)="close()">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
