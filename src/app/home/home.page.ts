@@ -16,6 +16,7 @@ registerLocaleData(localeFr, 'fr');
 export class HomePage implements OnInit {
 
   annonces: any;
+  promotion:any;
   location: any;
   urlPicture = "http://localhost:8000/admin/media/";
   camera: any;
@@ -35,6 +36,11 @@ export class HomePage implements OnInit {
     this.apiMobile.getAnnonces().then(data => {
       console.log(data)
       this.annonces = data['data'];
+    });
+
+    this.apiMobile.getPromo().then(data => {
+      console.log(data)
+      this.promotion = data['data'];
     });
     //this.Loading()
     this.apiMobile.getCamera().then(data => {

@@ -50,7 +50,7 @@ export class LoginPage implements OnInit {
 
   login() {
     if (this.user.Uloggin === "" || this.user.Upassword === "") {
-      this.msg = "Renseigner vos identifiants de connexion svp!";
+      this.msg = "Renseigner vos identifiants de connexion!";
       this.Toast(this.msg);
     } else {
       this.Loading()
@@ -99,7 +99,7 @@ export class LoginPage implements OnInit {
     const toast = await this.toastCtrl.create({
       message: msg,
       duration: 3000,
-      color: "primary",
+      color: "danger",
       buttons: [
         {
           text: 'OK',

@@ -24,10 +24,11 @@
           <ion-icon name="eye" slot="end"></ion-icon>
         </ion-item>
 
-        <ion-button expand="block" class="main-button" (click)="login()">Connexion</ion-button>
-
+        <ion-button expand="block" class="main-button" (click)="login()"  mode="ios">Connexion</ion-button>
+        
+        <h6 class="ion-text-center">Vous n'avez pas de compte?</h6>
         <div class="sign-up">
-          Vous n'avez pas de compte? <ion-button color="dark" fill="clear" routerLink="/signup"
+        <ion-button color="dark" fill="clear" routerLink="/signup"
             routerDirection="forward">Inscription</ion-button>
         </div>
       </form>

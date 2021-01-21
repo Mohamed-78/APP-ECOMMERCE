@@ -25,9 +25,25 @@
     </ion-item>
   </div>
 
+  <ion-card class="sliders">
+    <ion-slides pager="true" autoplay="1000" loop="true" style="height: 65%;">
+      <ion-slide>
+        <img src="../../assets/e1.jpg" width="100px;">
+      </ion-slide>
+
+      <ion-slide>
+        <img src="../../assets/e2.jpg">
+      </ion-slide>
+
+      <ion-slide>
+        <img src="../../assets/e3.jpg">
+      </ion-slide>
+      
+    </ion-slides>
+  </ion-card>
+
   <div class="title ion-padding">
     <h2>Categories</h2>
-    <p>See all</p>
   </div>
 
   <div class="category-slider ion-padding-start">
@@ -40,11 +56,12 @@
       </ion-slide>
     </ion-slides>
   </div>
-
-  <div class="title ion-padding">
-    <h2 class="font-bold">Nos routeurs</h2>
+<ion-item lines="none" color="primary" class="iteme">
+  <div class="title">
+    <h3>Nos routeurs</h3>
     <p>Voir plus</p>
   </div>
+</ion-item>
 
   <div class="product-slider ion-padding-start">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
@@ -58,10 +75,12 @@
     </ion-slides>
   </div>
 
-  <div class="title ion-padding">
-    <h2 class="font-bold">Nos cameras</h2>
-    <p>Voir plus</p>
-  </div>
+  <ion-item lines="none" color="primary" class="iteme">
+    <div class="title">
+      <h3>Nos cameras</h3>
+      <p>Voir plus</p>
+    </div>
+  </ion-item>
 
   <div class="product-slider ion-padding-start">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
@@ -70,6 +89,26 @@
           <img src="{{ urlPicture + cam.photo }}" />
           <p>{{ cam.prix }} FCFA</p>
           <h6>{{ cam.titre }}</h6>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-item lines="none" color="primary" class="iteme">
+    <div class="title">
+      <h3>Promotions</h3>
+      <p>Voir plus</p>
+    </div>
+  </ion-item>
+
+  <div class="product-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let promo of promotion">
+        <ion-col class="ion-text-left" [routerLink]="['/item-details',promo.id]" routerDirection="forward">
+          <ion-badge color="danger">{{ promo.reduction }}</ion-badge><img src="{{ urlPicture + promo.photo }}" />
+          <p>{{ promo.newPrice }} FCFA</p>
+          <p> <s>{{ promo.ancPrice }}</s> FCFA</p>
+          <h6>{{ promo.titre }}</h6>
         </ion-col>
       </ion-slide>
     </ion-slides>

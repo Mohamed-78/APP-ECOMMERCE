@@ -2,8 +2,37 @@ ion-menu-button {
     margin-left: 10px;
 }
 
+.sliders{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    border-style: none;
+}
+
 .filter {
     margin-right: 10px;
+}
+
+.iteme{
+    border-radius: 2px;
+    height: 45px;
+    .title {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    h3 {
+        color: white;
+        margin-top:0px;
+        padding-top: 0.4em;
+    }
+
+    p {
+        margin-left: 8em;
+        color: white;
+        margin-top:0px;
+        padding-top: 0.8em;
+    }
 }
 
 .search {
@@ -25,22 +54,6 @@ ion-menu-button {
     }
 }
 
-.title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 32px;
-
-    h2 {
-        margin: 0 0 0 16px;
-        color: #434343;
-    }
-
-    p {
-        margin: 0 16px 0 0;
-        color: #656565;
-    }
-}
 
 .category-slider {
     ion-slide {
@@ -76,9 +89,6 @@ ion-menu-button {
     }
 }
 
-.font-bold {
-    font-weight: bold;
-}
 
 .product-slider {
     margin-bottom: 30px;
