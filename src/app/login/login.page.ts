@@ -99,7 +99,7 @@ export class LoginPage implements OnInit {
     const toast = await this.toastCtrl.create({
       message: msg,
       duration: 3000,
-      color: "danger",
+      color: "primary",
       buttons: [
         {
           text: 'OK',

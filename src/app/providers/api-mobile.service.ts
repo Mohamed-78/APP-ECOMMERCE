@@ -25,6 +25,20 @@ export class ApiMobileService {
     });
   }
 
+  //Récupérer tous les routeurs
+  getAllRouteur() {
+    return new Promise(resolve => {
+      this.httpclient.get(this.apiUrl + "allRouteur").subscribe(
+        data => {
+          resolve(data);
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    });
+  }
+
   //Récupérer les annonces de routeurs
   getPromo() {
     return new Promise(resolve => {
